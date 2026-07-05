@@ -11,8 +11,12 @@ Claude Cowork, and Claude Science. One markdown source, three surfaces.
 2. **Knowledge bundles** capture what practitioners know about real datasets:
    the traps, the uncertainty structure, the validated recipes, every claim
    carrying evidence and a review status.
-3. **Verification** keeps it honest: marimo golden notebooks regression-test
+3. **Verification** keeps it honest: automated notebooks regression-test
    every computational workflow, and eval cases test scientific judgment.
+
+New to these terms? The [glossary](https://github.com/open-science-pillars/marketplace/blob/main/GLOSSARY.md)
+defines skill, knowledge bundle, golden notebook, surface, and connector in
+plain language.
 
 ## Start here
 
@@ -27,15 +31,19 @@ Cowork and Claude Science: add the marketplace and install from it, or see
 
 ## Repositories
 
-- [marketplace](https://github.com/open-science-pillars/marketplace): catalog, governance, canonical docs
-- [core](https://github.com/open-science-pillars/core): foundation plugin
-- [ocean-science](https://github.com/open-science-pillars/ocean-science): ECCO, SWOT, the PO.DAAC arc
-- [tutorials](https://github.com/open-science-pillars/tutorials): Quarto tutorials and demos
-- [plugin-template](https://github.com/open-science-pillars/plugin-template) and [knowledge-template](https://github.com/open-science-pillars/knowledge-template): scaffolds for contributors
+- [marketplace](https://github.com/open-science-pillars/marketplace) *(start here)*: catalog, glossary, governance, canonical docs
+- [core](https://github.com/open-science-pillars/core) *(installable)*: foundation plugin
+- [ocean-science](https://github.com/open-science-pillars/ocean-science) *(installable)*: ECCO, SWOT, the PO.DAAC arc
+- [hydrology](https://github.com/open-science-pillars/hydrology) *(in development)*: SWOT rivers/lakes, GRACE-FO, streamflow, soil moisture
+- [tutorials](https://github.com/open-science-pillars/tutorials) *(start here)*: timed walkthroughs and a browser demo
+- [plugin-template](https://github.com/open-science-pillars/plugin-template) and [knowledge-template](https://github.com/open-science-pillars/knowledge-template) *(scaffolds)*: for contributors building new plugins or bundles
+- [nasa-daac-knowledge](https://github.com/open-science-pillars/nasa-daac-knowledge) *(knowledge)*: canonical per-DAAC dataset knowledge bundles
+- [build-kit](https://github.com/open-science-pillars/build-kit) *(for maintainers)*: how to continue developing the project
 
 New here? The [tutorials](https://github.com/open-science-pillars/tutorials)
 are timed and fresh-install-tested (10, 20, and 30 minute tracks), and
 the demo folder has a browser-runnable companion.
 
 Questions: GitHub Discussions on the marketplace repo. Governance: lazy
-consensus with domain maintainers, DCO sign-off on PRs; see GOVERNANCE.md.
+consensus with domain maintainers, DCO (a one-line commit sign-off) on PRs;
+see GOVERNANCE.md.

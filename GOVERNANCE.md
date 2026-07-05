@@ -2,7 +2,7 @@
 
 Open Science Pillars is governed by lazy consensus: proposals (issues, PRs,
 Discussions) proceed unless a maintainer objects within a reasonable review
-window. Authored in Session 1 per SPECIFICATION.md v0.5.1 §1.2.
+window. Per SPEC §1.2.
 
 ## Review rules
 
@@ -13,6 +13,12 @@ window. Authored in Session 1 per SPECIFICATION.md v0.5.1 §1.2.
   steward review for any concept; two reviews, including a provider steward
   on provider bundles, for high-severity gotchas and for any edit that
   changes severity, status, or an Uncertainty section.
+- **Interim (pro tem) period:** while a bundle has no provider steward, the
+  provider second review is deferred until handoff, and the interim steward's
+  single review merges in the meantime. The high-severity gotchas verified
+  during this period are re-reviewed by the incoming provider steward when
+  they accept the bundle (see the steward playbook), so their review
+  authority is real rather than a rubber stamp at handoff.
 
 ## Provider maintainers
 

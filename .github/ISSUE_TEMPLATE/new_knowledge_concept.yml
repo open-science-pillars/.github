@@ -1,0 +1,58 @@
+name: New knowledge concept
+description: Propose a dataset, gotcha, recipe, or convention concept for a knowledge bundle.
+labels: [knowledge]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Concept type
+      description: SPEC §5.2 types.
+      options:
+        - dataset
+        - dataset-gotcha
+        - recipe
+        - convention
+    validations:
+      required: true
+  - type: input
+    id: bundle
+    attributes:
+      label: Target bundle
+      placeholder: ocean-science/knowledge (podaac arc), core/knowledge, ...
+    validations:
+      required: true
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset
+      description: The dataset concept this belongs to or links to (required for dataset and dataset-gotcha types).
+      placeholder: datasets/ecco-v4r4.md
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity (gotchas only)
+      description: High means silently wrong results; high severity requires a matching eval case and two reviews.
+      options:
+        - high
+        - medium
+        - low
+        - not a gotcha
+  - type: textarea
+    id: claim
+    attributes:
+      label: The claim
+      description: One trap or fact per concept. Mechanism, wrong-result mode, correct approach.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence links
+      description: At least one resolving link that actually supports the claim (product user guide, ATBD, known-issues page, forum thread, reproducing test). Evidence-free concepts are worse than gaps (SPEC §5.5).
+    validations:
+      required: true
+  - type: textarea
+    id: uncertainty
+    attributes:
+      label: Uncertainty section (dataset concepts only)
+      description: The product's native uncertainty or error fields and their caveats; required on every dataset concept (SPEC §5.1).

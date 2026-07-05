@@ -1,0 +1,32 @@
+name: New domain plugin proposal
+description: Propose a new domain plugin for the marketplace.
+labels: [new-plugin]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      placeholder: hydrology, remote sensing, planetary science, ...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and first datasets
+      description: The core datasets and workflows; which DAAC or archive arc it follows.
+    validations:
+      required: true
+  - type: textarea
+    id: knowledge
+    attributes:
+      label: Knowledge bundle plan
+      description: Candidate dataset concepts and known high-severity gotchas with evidence sources (SPEC §5).
+    validations:
+      required: true
+  - type: input
+    id: champion
+    attributes:
+      label: Champion
+      description: Who will build and maintain it. Start from plugin-template.
+    validations:
+      required: true

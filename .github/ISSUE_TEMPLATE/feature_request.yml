@@ -1,0 +1,26 @@
+name: Feature request
+description: Propose an improvement to an existing skill, agent, or workflow.
+labels: [enhancement]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: Plugin and skill (or agent)
+      placeholder: ocean-science / transport-analysis
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: The scientific task this serves
+      description: Describe the analysis or workflow need, not the implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current workaround, if any

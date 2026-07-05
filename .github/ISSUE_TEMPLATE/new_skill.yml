@@ -1,0 +1,40 @@
+name: New skill proposal
+description: Propose a new skill for an existing plugin.
+labels: [new-skill]
+body:
+  - type: input
+    id: plugin
+    attributes:
+      label: Target plugin
+      placeholder: core, ocean-science, ...
+    validations:
+      required: true
+  - type: dropdown
+    id: class
+    attributes:
+      label: Skill class
+      description: Knowledge skills are background expertise (user-invocable false, with narrow exceptions); workflow skills act and keep both invocation paths open with in-skill gates for side effects.
+      options:
+        - knowledge
+        - workflow
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What the skill knows or does; what it must NOT do; the confirmation gates if it has side effects.
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: Draft frontmatter description
+      description: 200 characters maximum, keyword-first (SPEC §0.3).
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification plan
+      description: Workflow skills need a marimo golden notebook (SPEC §6); describe the fixture and the assertions.

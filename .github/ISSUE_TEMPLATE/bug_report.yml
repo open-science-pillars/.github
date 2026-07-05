@@ -1,0 +1,35 @@
+name: Bug report
+description: A skill, agent, notebook, or install behaves incorrectly.
+labels: [bug]
+body:
+  - type: input
+    id: surface
+    attributes:
+      label: Surface
+      description: Claude Code, Cowork, or Claude Science (and version where known).
+    validations:
+      required: true
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin and skill
+      placeholder: core / report
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you asked for, what you got, what you expected. Include the prompt verbatim where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Minimal steps or transcript excerpt. For computational bugs, name the fixture or dataset (ShortName and date range).
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, relevant library versions.

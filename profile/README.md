@@ -33,5 +33,9 @@ Cowork and Claude Science: add the marketplace and install from it, or see
 - [tutorials](https://github.com/open-science-pillars/tutorials): Quarto tutorials and demos
 - [plugin-template](https://github.com/open-science-pillars/plugin-template) and [knowledge-template](https://github.com/open-science-pillars/knowledge-template): scaffolds for contributors
 
+New here? The [tutorials](https://github.com/open-science-pillars/tutorials)
+are timed and fresh-install-tested (10, 20, and 30 minute tracks), and
+the demo folder has a browser-runnable companion.
+
 Questions: GitHub Discussions on the marketplace repo. Governance: lazy
 consensus with domain maintainers, DCO sign-off on PRs; see GOVERNANCE.md.

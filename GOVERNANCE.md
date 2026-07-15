@@ -4,6 +4,29 @@ Open Science Pillars is governed by lazy consensus: proposals (issues, PRs,
 Discussions) proceed unless a maintainer objects within a reasonable review
 window. Per SPEC §1.2.
 
+## Federated repository authority
+
+The organization coordinates a portfolio, but each repository is governed by
+the maintainers declared in that repository's `.osp/governance.yaml` and
+CODEOWNERS. Organization roadmap work enters a repository as a proposal. The
+repository maintainers accept, defer, reject, prioritize, implement, and close
+that work. Organization stewards cannot mark repository work accepted or
+complete for them.
+
+Cross-repository initiatives complete only when every required repository has
+accepted and completed its deliverables. A repository may disable organization
+proposal seeding in its governance file; the organization then supplies a
+review artifact instead of creating an issue.
+
+### Interim solo period
+
+While a repository has one active maintainer, repository-local work may merge
+after its documented verification passes. Governance, roadmap schemas,
+organization templates, and other cross-repository changes receive a 72-hour
+public review window. Security fixes and urgent breakage may bypass the window
+only when the exception and reason are recorded. Review-enforcing rulesets are
+not enabled until a repository has at least two maintainers.
+
 ## Review rules
 
 - One domain-maintainer review merges an ordinary PR.
@@ -29,7 +52,12 @@ concepts, and authorship credit on the bundle's Zenodo releases.
 
 ## Contribution mechanics
 
-- PRs require DCO sign-off (`git commit -s`).
+- Contribution policy requires DCO sign-off (`git commit -s`). The DCO app was
+  verified passing across the roadmap PR set on 2026-07-15. Protected-branch
+  rules remain unverified; do not describe them as enabled without live
+  evidence.
 - GitHub Discussions on the marketplace repo is the user Q&A channel.
 - Security reports follow SECURITY.md, never public issues.
 - The Contributor Covenant v2.1 (CODE_OF_CONDUCT.md) applies org-wide.
+- Roadmap proposal decisions use `roadmap:accepted`, `roadmap:deferred`, or
+  `roadmap:rejected`; only repository maintainers apply the decision.

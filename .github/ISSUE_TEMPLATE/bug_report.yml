@@ -6,7 +6,7 @@ body:
     id: surface
     attributes:
       label: Surface
-      description: Claude Code, Cowork, or Claude Science (and version where known).
+      description: Claude Code, Cowork, Claude Science, or Codex where the repository claims support (include version when known).
     validations:
       required: true
   - type: input

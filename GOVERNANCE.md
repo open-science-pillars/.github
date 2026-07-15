@@ -52,9 +52,10 @@ concepts, and authorship credit on the bundle's Zenodo releases.
 
 ## Contribution mechanics
 
-- Contribution policy requires DCO sign-off (`git commit -s`). Automated DCO
-  enforcement and protected-branch rules are not currently verified; do not
-  describe either as enabled until a live audit records evidence.
+- Contribution policy requires DCO sign-off (`git commit -s`). The DCO app was
+  verified passing across the roadmap PR set on 2026-07-15. Protected-branch
+  rules remain unverified; do not describe them as enabled without live
+  evidence.
 - GitHub Discussions on the marketplace repo is the user Q&A channel.
 - Security reports follow SECURITY.md, never public issues.
 - The Contributor Covenant v2.1 (CODE_OF_CONDUCT.md) applies org-wide.

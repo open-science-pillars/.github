@@ -38,6 +38,7 @@ Cowork and Claude Science: add the marketplace and install from it, or see
 - [tutorials](https://github.com/open-science-pillars/tutorials) *(start here)*: timed walkthroughs and a browser demo
 - [plugin-template](https://github.com/open-science-pillars/plugin-template) and [knowledge-template](https://github.com/open-science-pillars/knowledge-template) *(scaffolds)*: for contributors building new plugins or bundles
 - [nasa-daac-knowledge](https://github.com/open-science-pillars/nasa-daac-knowledge) *(knowledge)*: canonical per-DAAC dataset knowledge bundles
+- [archive-observatory](https://github.com/open-science-pillars/archive-observatory) *(observatory)*: cross-archive metadata compliance, receipted; aggregate-public by policy, credential-free by construction
 - [build-kit](https://github.com/open-science-pillars/build-kit) *(for maintainers)*: how to continue developing the project
 
 New here? The [tutorials](https://github.com/open-science-pillars/tutorials)

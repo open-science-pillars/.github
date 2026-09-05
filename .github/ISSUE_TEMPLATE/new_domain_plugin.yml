@@ -20,7 +20,7 @@ body:
     id: knowledge
     attributes:
       label: Knowledge bundle plan
-      description: Candidate dataset concepts and known high-severity gotchas with evidence sources (SPEC §5).
+      description: Candidate dataset concepts and known high-severity gotchas with evidence sources.
     validations:
       required: true
   - type: input

@@ -30,11 +30,11 @@ body:
     id: description
     attributes:
       label: Draft frontmatter description
-      description: 200 characters maximum, keyword-first (SPEC §0.3).
+      description: 200 characters maximum, keyword-first.
     validations:
       required: true
   - type: textarea
     id: verification
     attributes:
       label: Verification plan
-      description: Workflow skills need a marimo golden notebook (SPEC §6); describe the fixture and the assertions.
+      description: Workflow skills need a marimo golden notebook; describe the fixture and the assertions.

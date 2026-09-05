@@ -2,7 +2,8 @@
 
 Open Science Pillars is governed by lazy consensus: proposals (issues, PRs,
 Discussions) proceed unless a maintainer objects within a reasonable review
-window. Per SPEC §1.2.
+window. This is the governance the specification sets
+(docs/SPECIFICATION.md in open-science-pillars/marketplace).
 
 ## Federated repository authority
 
@@ -32,7 +33,7 @@ not enabled until a repository has at least two maintainers.
 - One domain-maintainer review merges an ordinary PR.
 - Two reviews for cross-cutting changes (anything touching more than one
   plugin, the marketplace catalog, governance, or org-wide templates).
-- Knowledge-concept PRs follow the stewardship rules of SPEC §5.4: one
+- Knowledge-concept PRs follow the specification's stewardship rules: one
   steward review for any concept; two reviews, including a provider steward
   on provider bundles, for high-severity gotchas and for any edit that
   changes severity, status, or an Uncertainty section.

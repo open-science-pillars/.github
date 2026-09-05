@@ -2,7 +2,7 @@
 
 ## What and why
 
-<!-- One paragraph. Cite the spec section this implements where applicable. -->
+<!-- One paragraph. Name the specification rule this implements, where applicable. -->
 
 ## Checklist
 

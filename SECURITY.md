@@ -1,9 +1,8 @@
 # Security Policy
 
 Skills and knowledge bundles are an instruction supply chain into every
-user's agent (SPEC §5.8). Treat prompt-injection
-content in a skill, agent, or knowledge concept as a security issue, not
-a content quality issue.
+user's agent. Treat prompt-injection content in a skill, agent, or
+knowledge concept as a security issue, not a content quality issue.
 
 ## Reporting
 

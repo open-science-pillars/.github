@@ -30,7 +30,7 @@ not enabled until a repository has at least two maintainers.
 
 ## Review rules
 
-- One domain-maintainer review merges an ordinary PR.
+- One review from the owning team merges an ordinary PR (a domain maintainer for a capability, the foundation team for a foundation or tooling repository).
 - Two reviews for cross-cutting changes (anything touching more than one
   plugin, the marketplace catalog, governance, or org-wide templates).
 - Knowledge-concept PRs follow the specification's stewardship rules: one
@@ -44,12 +44,73 @@ not enabled until a repository has at least two maintainers.
   they accept the bundle (see the steward playbook), so their review
   authority is real rather than a rubber stamp at handoff.
 
-## Provider maintainers
+## Teams (2026-09-12)
 
-Knowledge bundles may be maintained by data-provider staff (for example,
-PO.DAAC personnel for the podaac bundle) as domain maintainers for their
-bundle: CODEOWNERS entries on the bundle paths, review authority over its
-concepts, and authorship credit on the bundle's Zenodo releases.
+Ownership is by team, never by individual: every CODEOWNERS owner and
+every team a repository's `.osp/governance.yaml` names is one of the
+teams declared in build-kit's `osp/teams.yaml`, written
+`@open-science-pillars/<team>`, and build-kit's `osp.py validate`
+refuses anything else. Four responsibilities, four kinds of team
+(ADR A, docs/decisions in the marketplace repository):
+
+- **Repository and sphere maintainers** own implementation, roadmap,
+  repository changes and sphere coordination: `foundation-maintainers`
+  for the foundation and tooling repositories, and one team per Earth
+  science sphere (`hydrosphere-maintainers`, `cryosphere-maintainers`,
+  `geosphere-maintainers`, `atmosphere-maintainers`,
+  `biosphere-maintainers`) for the domain capabilities in it. A sphere
+  team coordinates proposals across its capabilities; each repository's
+  authority stays federated as above.
+- **Knowledge stewards** own scientific correctness, evidence,
+  provenance, staleness, high-severity review and provider approval.
+  Provider stewards are child teams of `provider-stewards`
+  (`podaac-stewards`, `esdis-stewards`; a partner's team is added when
+  its bundle exists) and own their bundle's paths. Methods stewards
+  (`hydrosphere-methods-stewards`) own the recipes and attested
+  computations that combine several providers' products, the third
+  steward type the architecture document records. Sphere teams do not
+  override stewards, and a sphere tag on a concept moves no authority.
+- **Runtime maintainers** own packaging, runtime compatibility,
+  connector binding, permission mapping and qualification for one
+  projection each: `runtime-cowork-maintainers` (the Claude package
+  files, `.claude-plugin` and `.mcp.json`), `runtime-agent-plugins-maintainers`
+  (the Agent Plugins `plugin.json` and `mcp.json`) and
+  `runtime-codex-maintainers` (Codex qualification). A runtime
+  maintainer may reject a package that does not resolve its required
+  knowledge on their runtime; they may not approve a scientific claim
+  as correct, and a runtime projection may not redefine scientific
+  semantics. A packaging-only change needs no scientific re-approval
+  unless semantics change.
+- **Composites maintainers** (`composites-maintainers`) coordinate the
+  cross-sphere composites.
+
+Provider staff who accept a bundle join its steward team (the steward
+playbook): CODEOWNERS entries on the bundle paths, review authority over
+its concepts, and authorship credit on the bundle's releases follow
+from membership, with no CODEOWNERS edit.
+
+### Composite review rule
+
+A composite change that touches several spheres needs review
+representation from each sphere it touches, in addition to repository
+merge authority, knowledge steward review where knowledge changes and
+runtime review where packaging changes. During the interim solo period
+the exception below applies.
+
+### Interim membership
+
+One person occupies every team until a handoff, and that is recorded in
+each `governance.yaml` as `status: interim`. Review-enforcing rulesets
+stay off until a repository has two maintainers, as the interim solo
+period section says; the team structure exists now so that accepting a
+maintainer or a steward is a membership change, never a rearrangement.
+
+### Planned repositories
+
+Creating a planned repository (the honest placeholder for a capability
+the organization intends, holding nothing installable) is
+administrative. Promoting one out of planned is governed, cross-cutting
+work under its own dated entry in the Phase-2 pre-registration.
 
 ## Contribution mechanics
 

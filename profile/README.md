@@ -37,32 +37,38 @@ Rendered by build-kit's `osp.py sphere-view --into` from every repository's
 
 **Atmosphere**
 
-- no domain capability yet
+- [atmospheric-composition](https://github.com/open-science-pillars/atmospheric-composition) *(planned)*: Atmospheric Composition
+- [atmospheric-physics](https://github.com/open-science-pillars/atmospheric-physics) *(planned)*: Atmospheric Physics
 
 **Biosphere**
 
-- no domain capability yet
+- [land-ecosystems](https://github.com/open-science-pillars/land-ecosystems) *(planned)*: Land Ecosystems
+- [ocean-biology](https://github.com/open-science-pillars/ocean-biology) *(planned)*: Ocean Biology
 
 **Cryosphere**
 
-- no domain capability yet
+- [land-ice](https://github.com/open-science-pillars/land-ice) *(planned)*: Land Ice
+- [sea-ice](https://github.com/open-science-pillars/sea-ice) *(planned)*: Sea Ice
 
 **Geosphere**
 
-- no domain capability yet
+- [land-surface](https://github.com/open-science-pillars/land-surface) *(planned)*: Land Surface
+- [solid-earth](https://github.com/open-science-pillars/solid-earth) *(planned)*: Solid Earth
 
 **Hydrosphere**
 
 - [hydrology](https://github.com/open-science-pillars/hydrology) *(developing)*: Terrestrial Hydrology; also Cryosphere
 - [ocean-science](https://github.com/open-science-pillars/ocean-science) *(available)*: Ocean Physics
+- [precipitation](https://github.com/open-science-pillars/precipitation) *(planned)*: Precipitation Science; also Atmosphere
 
 **Provider knowledge** (signed by its stewards; cuts across spheres)
 
 - [nasa-daac-knowledge](https://github.com/open-science-pillars/nasa-daac-knowledge) *(available)*: Provider knowledge bundles (PO.DAAC, ESDIS), signed by their stewards; installed as a dependency of the domain capabilities
+- [partner-knowledge](https://github.com/open-science-pillars/partner-knowledge) *(planned)*: Provider knowledge from non-NASA stewards, signed by them; none engaged yet
 
 **Composites** (cross-sphere)
 
-- none yet
+- [composites](https://github.com/open-science-pillars/composites) *(planned)*: Cross-sphere composites, each with its own steward, joint knowledge and validation; none yet
 
 **Foundation and tooling** (serve every sphere)
 

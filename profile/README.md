@@ -18,7 +18,8 @@ One install brings the capability's dependencies (the foundation and the
 provider knowledge) with it. Claude Code is the supported runtime today;
 Claude Cowork installs from the same marketplace and is tested; the
 portable Agent Plugins projection for OpenAI Codex and other clients is
-being built. The status per runtime is in the
+rendered from the same source and conformance-checked, and no release
+is qualified on Codex yet. The status per runtime is in the
 [runtime distribution note](https://github.com/open-science-pillars/marketplace/blob/main/docs/runtime-distribution.md).
 New to a term? The
 [glossary](https://github.com/open-science-pillars/marketplace/blob/main/GLOSSARY.md)

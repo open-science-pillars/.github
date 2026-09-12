@@ -38,8 +38,7 @@ Cowork and Claude Science: add the marketplace and install from it, or see
 - [tutorials](https://github.com/open-science-pillars/tutorials) *(start here)*: timed walkthroughs and a browser demo
 - [plugin-template](https://github.com/open-science-pillars/plugin-template) and [knowledge-template](https://github.com/open-science-pillars/knowledge-template) *(scaffolds)*: for contributors building new plugins or bundles
 - [nasa-daac-knowledge](https://github.com/open-science-pillars/nasa-daac-knowledge) *(knowledge)*: canonical per-DAAC dataset knowledge bundles
-- [ecco-budget-badge](https://github.com/open-science-pillars/ecco-budget-badge) *(attestation)*: budget-closure receipts and the adoptable badge
-- [ecco-agent-evals](https://github.com/open-science-pillars/ecco-agent-evals) *(benchmark)*: the gotcha-avoidance eval set, cases and published results
+- [agent-evals](https://github.com/open-science-pillars/agent-evals) *(benchmark)*: the one benchmark repository; the ECCO gotcha-avoidance set, cases and published results, under `ecco/`
 - [archive-observatory](https://github.com/open-science-pillars/archive-observatory) *(observatory)*: cross-archive metadata compliance, receipted; aggregate-public by policy, credential-free by construction
 - [build-kit](https://github.com/open-science-pillars/build-kit) *(for maintainers)*: how to continue developing the project
 

@@ -69,7 +69,7 @@ Rendered by build-kit's `osp.py sphere-view --into` from every repository's
 
 - [composites](https://github.com/open-science-pillars/composites) *(planned)*: Cross-sphere composites, each with its own steward, joint knowledge and validation; none yet
 
-**Foundation and tooling** (serve every sphere)
+<details><summary>Foundation and tooling (serve every sphere)</summary>
 
 - [.github](https://github.com/open-science-pillars/.github) *(available)*: Organization profile, issue and pull request templates, governance
 - [agent-evals](https://github.com/open-science-pillars/agent-evals) *(available)*: The organization's one benchmark repository; each product's cases, fixtures and results under its own directory (ecco/ first), governed by one charter
@@ -81,6 +81,8 @@ Rendered by build-kit's `osp.py sphere-view --into` from every repository's
 - [marketplace](https://github.com/open-science-pillars/marketplace) *(available)*: The plugin catalog and the canonical documentation
 - [plugin-template](https://github.com/open-science-pillars/plugin-template) *(available)*: Template: a copy renames repository.name (and package.yaml) before it validates
 - [tutorials](https://github.com/open-science-pillars/tutorials) *(available)*: Timed walkthroughs and the browser demo
+
+</details>
 <!-- osp-sphere-view:end -->
 
 ## Where to go next

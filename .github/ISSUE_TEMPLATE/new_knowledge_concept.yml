@@ -47,7 +47,7 @@ body:
     id: severity
     attributes:
       label: Severity (gotchas only)
-      description: High means silently wrong results; high severity requires a matching eval case and two reviews.
+      description: High means silently wrong results; high severity requires a matching eval case and two human reviews of any role (a provider review is invited, not required).
       options:
         - high
         - medium

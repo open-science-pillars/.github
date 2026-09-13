@@ -1,12 +1,16 @@
 name: New skill proposal
-description: Propose a new skill for an existing plugin.
+description: Propose a new skill for an existing capability.
 labels: [new-skill]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        The path from this issue to a merged pull request (where a skill lives, the frontmatter rules, what a workflow skill owes, what the gate runs) is the marketplace repository's [contributing-a-skill.md](https://github.com/open-science-pillars/marketplace/blob/main/docs/contributing-a-skill.md).
   - type: input
     id: plugin
     attributes:
-      label: Target plugin
-      placeholder: core, ocean-science, ...
+      label: Target capability
+      placeholder: core, ocean-science, hydrology
     validations:
       required: true
   - type: dropdown
@@ -37,4 +41,4 @@ body:
     id: verification
     attributes:
       label: Verification plan
-      description: Workflow skills need a marimo golden notebook; describe the fixture and the assertions.
+      description: A workflow skill that encodes a computation needs a golden script in verification/ that runs green headless; describe the fixture and the assertions. A high-severity gotcha the skill cites needs an eval case.

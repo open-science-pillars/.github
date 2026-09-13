@@ -3,16 +3,16 @@ description: A skill, agent, notebook, or install behaves incorrectly.
 labels: [bug]
 body:
   - type: input
-    id: surface
+    id: runtime
     attributes:
-      label: Surface
-      description: Claude Code, Cowork, Claude Science, or Codex where the repository claims support (include version when known).
+      label: Runtime
+      description: Claude Code, Claude Cowork or OpenAI Codex (include the version when known); the capability's README says which runtimes a release is qualified on.
     validations:
       required: true
   - type: input
     id: plugin
     attributes:
-      label: Plugin and skill
+      label: Capability and skill
       placeholder: core / report
     validations:
       required: true

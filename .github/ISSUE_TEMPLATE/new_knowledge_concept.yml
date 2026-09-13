@@ -1,26 +1,42 @@
 name: New knowledge concept
-description: Propose a dataset, gotcha, recipe, or convention concept for a knowledge bundle.
+description: Propose a concept for a knowledge bundle (a dataset, a gotcha, a recipe, a convention, a computation, a connector, a finding, a dead-end or a field-state).
 labels: [knowledge]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        How each type is written, field by field, is in the marketplace repository's [contributing-knowledge.md](https://github.com/open-science-pillars/marketplace/blob/main/docs/contributing-knowledge.md). Unsure whether this is knowledge or a skill? Run the five questions in [knowledge-vs-skills.md](https://github.com/open-science-pillars/marketplace/blob/main/docs/knowledge-vs-skills.md).
   - type: dropdown
     id: type
     attributes:
       label: Concept type
-      description: Which of the org's concept types this is.
+      description: The specification's concept types; contributing-knowledge.md says what each one requires.
       options:
         - dataset
         - dataset-gotcha
         - recipe
         - convention
+        - computation
+        - connector
+        - finding
+        - dead-end
+        - field-state
     validations:
       required: true
   - type: input
     id: bundle
     attributes:
       label: Target bundle
-      placeholder: ocean-science/knowledge (podaac arc), core/knowledge, ...
+      description: The bundle the concept belongs in, by repository and path.
+      placeholder: nasa-daac-knowledge/knowledge/podaac, nasa-daac-knowledge/knowledge/esdis, core/knowledge, ocean-science/knowledge, hydrology/knowledge
     validations:
       required: true
+  - type: input
+    id: spheres
+    attributes:
+      label: Spheres
+      description: The Earth science spheres the claim applies to (atmosphere, biosphere, cryosphere, geosphere, hydrosphere). Required on every scientific concept; a connector concept needs none.
+      placeholder: hydrosphere
   - type: input
     id: dataset
     attributes:
@@ -41,7 +57,7 @@ body:
     id: claim
     attributes:
       label: The claim
-      description: One trap or fact per concept. Mechanism, wrong-result mode, correct approach.
+      description: One trap or fact per concept. Mechanism, wrong-result mode, correct approach. For a dead-end, what was tried and what happened; for a field-state, the positions held and by whom.
     validations:
       required: true
   - type: textarea

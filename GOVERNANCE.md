@@ -37,7 +37,7 @@ not enabled until a repository has at least two maintainers.
   steward review for any concept; two reviews, including a provider steward
   on provider bundles, for high-severity gotchas and for any edit that
   changes severity, status, or an Uncertainty section.
-- **Interim (pro tem) period:** while a bundle has no provider steward, the
+- **Interim period:** while a bundle has no provider steward, the
   provider second review is deferred until handoff, and the interim steward's
   single review merges in the meantime. The high-severity gotchas verified
   during this period are re-reviewed by the incoming provider steward when
@@ -68,7 +68,8 @@ refuses anything else. Four responsibilities, four kinds of team
   its bundle exists) and own their bundle's paths. Methods stewards
   (`hydrosphere-methods-stewards`) own the recipes and attested
   computations that combine several providers' products, the third
-  steward type the architecture document records. Sphere teams do not
+  steward type the model document records (docs/MODEL.md in the
+  marketplace repository). Sphere teams do not
   override stewards, and a sphere tag on a concept moves no authority.
 - **Runtime maintainers** own packaging, runtime compatibility,
   connector binding, permission mapping and qualification for one
@@ -110,14 +111,14 @@ maintainer or a steward is a membership change, never a rearrangement.
 Creating a planned repository (the honest placeholder for a capability
 the organization intends, holding nothing installable) is
 administrative. Promoting one out of planned is governed, cross-cutting
-work under its own dated entry in the Phase-2 pre-registration.
+work under its own dated entry in the pre-registration
+(docs/phase2-preregistration.md in the marketplace repository).
 
 ## Contribution mechanics
 
-- Contribution policy requires DCO sign-off (`git commit -s`). The DCO app was
-  verified passing across the roadmap PR set on 2026-07-15. Protected-branch
-  rules remain unverified; do not describe them as enabled without live
-  evidence.
+- Contribution policy requires DCO sign-off (`git commit -s`).
+  Protected-branch rules remain unverified; do not describe them as enabled
+  without live evidence.
 - GitHub Discussions on the marketplace repo is the user Q&A channel.
 - Security reports follow SECURITY.md, never public issues.
 - The Contributor Covenant v2.1 (CODE_OF_CONDUCT.md) applies org-wide.

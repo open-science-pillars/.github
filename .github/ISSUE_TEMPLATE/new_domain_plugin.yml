@@ -1,26 +1,46 @@
-name: New domain plugin proposal
-description: Propose a new domain plugin for the marketplace.
+name: New domain capability
+description: Propose a new domain capability (a discipline inside a sphere), a cross-sphere composite, or a provider knowledge bundle.
 labels: [new-plugin]
 body:
-  - type: input
-    id: domain
+  - type: markdown
     attributes:
-      label: Domain
-      placeholder: hydrology, remote sensing, planetary science, ...
+      value: |
+        A capability starts from [plugin-template](https://github.com/open-science-pillars/plugin-template) (a bundle from [knowledge-template](https://github.com/open-science-pillars/knowledge-template)); the `.osp/` files it declares itself with are explained by example in the marketplace repository's [package-authoring-guide.md](https://github.com/open-science-pillars/marketplace/blob/main/docs/package-authoring-guide.md). A planned repository for the discipline may already exist: see the sphere view on the [organization profile](https://github.com/open-science-pillars).
+  - type: dropdown
+    id: sphere
+    attributes:
+      label: Sphere
+      description: The Earth science sphere the capability serves; a composite crosses several; provider knowledge is signed by its stewards and serves every sphere.
+      options:
+        - Atmosphere
+        - Biosphere
+        - Cryosphere
+        - Geosphere
+        - Hydrosphere
+        - cross-sphere composite
+        - provider knowledge
+    validations:
+      required: true
+  - type: input
+    id: discipline
+    attributes:
+      label: Discipline
+      description: The research area inside the sphere (for provider knowledge, the provider).
+      placeholder: Precipitation Science, Sea Ice, Solid Earth, Ocean Biology, ...
     validations:
       required: true
   - type: textarea
     id: scope
     attributes:
       label: Scope and first datasets
-      description: The core datasets and workflows; which DAAC or archive arc it follows.
+      description: The core datasets and workflows; which archive or provider it draws on.
     validations:
       required: true
   - type: textarea
     id: knowledge
     attributes:
       label: Knowledge bundle plan
-      description: Candidate dataset concepts and known high-severity gotchas with evidence sources.
+      description: Candidate dataset concepts and known high-severity gotchas with evidence sources; which provider bundle the capability will depend on.
     validations:
       required: true
   - type: input

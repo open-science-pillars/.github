@@ -1,30 +1,28 @@
 # Open Science Pillars
 
-Governed, portable scientific capabilities for AI agents, organized by
-the five Earth science spheres. Each capability is skills an agent can
-run, knowledge signed by the people who steward the data, and
-deterministic verification, authored once and delivered to the runtime
-you use. A personal open-source project; not a NASA, JPL, or PO.DAAC
-product.
+Skills, signed knowledge and deterministic checks for Earth science,
+installed as plugins into Claude Code and Claude Cowork. Each
+capability is procedures an agent can run, facts about data signed by
+the people who steward it, and checks that emit receipts with no
+language model in the path. A personal open-source project; not a
+NASA, JPL, or PO.DAAC product.
 
-## Start here
+## Install
+
+Claude Code:
 
 ```bash
 claude plugin marketplace add open-science-pillars/marketplace
 claude plugin install ocean-science@open-science-pillars
 ```
 
-One install brings the capability's dependencies (the foundation and the
-provider knowledge) with it. Claude Code is the supported runtime today;
-Claude Cowork installs from the same marketplace and is tested; the
-portable Agent Plugins projection for OpenAI Codex and other clients is
-rendered from the same source and conformance-checked, and no release
-is qualified on Codex yet. The status per runtime is in the
-[runtime distribution note](https://github.com/open-science-pillars/marketplace/blob/main/docs/runtime-distribution.md).
-New to a term? The
-[glossary](https://github.com/open-science-pillars/marketplace/blob/main/GLOSSARY.md)
-defines sphere, capability, skill, knowledge bundle, golden notebook and
-runtime in plain language.
+Claude Cowork: from Customize > Plugins > Add marketplace, add the
+marketplace by repository, `open-science-pillars/marketplace`; install
+the capability you want from it. It is the same plugin, and it brings
+its dependencies (the foundation and the provider knowledge) with it.
+
+Available: core, ocean-science, nasa-daac-knowledge. Developing:
+hydrology. Eleven sphere repositories are planned and not installable.
 
 ## By sphere
 
@@ -85,23 +83,22 @@ Rendered by build-kit's `osp.py sphere-view --into` from every repository's
 - [tutorials](https://github.com/open-science-pillars/tutorials) *(available)*: Timed walkthroughs and the browser demo
 <!-- osp-sphere-view:end -->
 
-## How it fits together
+## Where to go next
 
-- **KNOW**: concepts, claims about data with evidence, a steward's
-  signature and a staleness date, in the provider and domain bundles.
-- **ACT**: skills, portable procedures an agent runs; one canonical
-  `SKILL.md` per workflow.
-- **PROVE**: golden notebooks and attesters, deterministic checks that
-  emit receipts, with no language model in the path.
-- **REACH**: connectors, the controlled execution surfaces.
-
-The decisions behind the shape are in the marketplace repository's
-[decision records](https://github.com/open-science-pillars/marketplace/tree/main/docs/decisions).
+A capability is four kinds of thing: knowledge bundles, skills,
+deterministic checks and connectors; the
+[glossary](https://github.com/open-science-pillars/marketplace/blob/main/GLOSSARY.md)
+defines each of them, and every other term, in plain language.
 
 New here? The [tutorials](https://github.com/open-science-pillars/tutorials)
 are timed and fresh-install-tested (10, 20, and 30 minute tracks), and
-the demo folder has a browser-runnable companion.
+the demo folder has a browser-runnable companion. The
+[marketplace README](https://github.com/open-science-pillars/marketplace#readme)
+is the catalog: what is available, how to update, and the documentation
+map. Contributing starts at
+[CONTRIBUTING](https://github.com/open-science-pillars/marketplace/blob/main/CONTRIBUTING.md);
+who reviews what, and how decisions are taken, is in
+[GOVERNANCE](https://github.com/open-science-pillars/.github/blob/main/GOVERNANCE.md)
+(lazy consensus with owning teams, DCO sign-off on every commit).
 
-Questions: GitHub Discussions on the marketplace repo. Governance: lazy
-consensus with owning teams, DCO (a one-line commit sign-off) on PRs;
-see GOVERNANCE.md.
+Questions: GitHub Discussions on the marketplace repo.

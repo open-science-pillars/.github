@@ -5,7 +5,7 @@ body:
   - type: input
     id: target
     attributes:
-      label: Plugin and skill (or agent)
+      label: Capability and skill (or agent)
       placeholder: ocean-science / transport-analysis
     validations:
       required: true

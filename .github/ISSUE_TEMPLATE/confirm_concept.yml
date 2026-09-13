@@ -1,0 +1,46 @@
+name: Confirm a knowledge concept
+description: You know the product. Tell us whether one concept about it is right; a reply is all that is asked.
+title: "Confirm a knowledge concept"
+labels: [knowledge, confirm]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A reply is all that is asked. Read the concept at the path below (the link in the knowledge digest opens it), then pick an answer. The maintainer records your confirmation on your behalf as a `verified` event in your name, with this reply as its source, so the concept is voiced as provider-confirmed wherever it is cited. No git, no tooling, no account beyond the one you are replying with; "not my product" is a complete and useful answer. How this fits the ladder (consulted, reviewer, steward) is in the marketplace repository's [steward playbook](https://github.com/open-science-pillars/marketplace/blob/main/docs/steward-playbook.md).
+  - type: input
+    id: concept
+    attributes:
+      label: Concept
+      description: The concept path in its bundle.
+      placeholder: knowledge/podaac/gotchas/ecco-access-static-collections.md
+    validations:
+      required: true
+  - type: input
+    id: product
+    attributes:
+      label: Product
+      description: The product the concept is about, as you name it.
+      placeholder: ECCO V4r4
+    validations:
+      required: true
+  - type: dropdown
+    id: answer
+    attributes:
+      label: Your answer
+      options:
+        - Confirmed as written
+        - Needs a correction
+        - Not my product or not my call
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Correction (optional)
+      description: What is wrong, and the source that shows it (a user guide, a release note, a known-issues page, your own words are fine too).
+  - type: input
+    id: affiliation
+    attributes:
+      label: Affiliation (optional)
+      description: Your data center or group, for the credit line.
+      placeholder: NASA PO.DAAC

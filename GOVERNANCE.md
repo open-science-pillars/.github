@@ -33,16 +33,20 @@ not enabled until a repository has at least two maintainers.
 - One review from the owning team merges an ordinary PR (a domain maintainer for a capability, the foundation team for a foundation or tooling repository).
 - Two reviews for cross-cutting changes (anything touching more than one
   plugin, the marketplace catalog, governance, or org-wide templates).
-- Knowledge-concept PRs follow the specification's stewardship rules: one
-  steward review for any concept; two reviews, including a provider steward
-  on provider bundles, for high-severity gotchas and for any edit that
-  changes severity, status, or an Uncertainty section.
-- **Interim period:** while a bundle has no provider steward, the
-  provider second review is deferred until handoff, and the interim steward's
-  single review merges in the meantime. The high-severity gotchas verified
-  during this period are re-reviewed by the incoming provider steward when
-  they accept the bundle (see the steward playbook), so their review
-  authority is real rather than a rubber stamp at handoff.
+- Knowledge-concept PRs follow the specification's stewardship and
+  review rules: one human review of any role for any concept, and a
+  concept becomes `stable` on that one review; two human reviews of any
+  role for high-severity gotchas and for any edit that changes severity,
+  status, or an Uncertainty section. A provider review is preferred and
+  invited for the second, never required: a second maintainer or a
+  community reviewer satisfies the rule. The merge-then-sign rule and
+  the signature debt are unchanged; they are about edits after a
+  signature, not about who signed.
+- **Provider confirmation is additive.** The maintainer who holds a
+  bundle is its steward. A data provider's confirmation raises a
+  concept's trust tier (provider-confirmed, voiced by skills when they
+  cite) and is never a precondition for a concept to be stable, a
+  capability to be released or promoted, or a composite to exist.
 
 ## Teams (2026-09-12)
 
@@ -62,10 +66,12 @@ refuses anything else. Four responsibilities, four kinds of team
   team coordinates proposals across its capabilities; each repository's
   authority stays federated as above.
 - **Knowledge stewards** own scientific correctness, evidence,
-  provenance, staleness, high-severity review and provider approval.
-  Provider stewards are child teams of `provider-stewards`
-  (`podaac-stewards`, `esdis-stewards`; a partner's team is added when
-  its bundle exists) and own their bundle's paths. Methods stewards
+  provenance, staleness and high-severity review. The steward teams
+  stay in CODEOWNERS: provider bundle stewards are child teams of
+  `provider-stewards` (`podaac-stewards`, `esdis-stewards`; a partner's
+  team is added when its bundle exists) and own their bundle's paths,
+  held by the maintainer who holds the bundle and by anyone who takes
+  the top rung of the ladder below. Methods stewards
   (`hydrosphere-methods-stewards`) own the recipes and attested
   computations that combine several providers' products, the third
   steward type the model document records (docs/MODEL.md in the
@@ -85,26 +91,48 @@ refuses anything else. Four responsibilities, four kinds of team
 - **Composites maintainers** (`composites-maintainers`) coordinate the
   cross-sphere composites.
 
-Provider staff who accept a bundle join its steward team (the steward
-playbook): CODEOWNERS entries on the bundle paths, review authority over
-its concepts, and authorship credit on the bundle's releases follow
-from membership, with no CODEOWNERS edit.
+### The ladder of involvement
+
+Provenance is a ladder, and a person at a data center may stand on any
+rung of it; nothing above the first is required of anyone.
+
+- **Consulted:** they answer a "confirm this concept" issue (the
+  organization's confirm-a-concept template) with confirmed, a
+  correction, or not my product. No git or tooling is asked of them:
+  the maintainer records the `verified` event on their behalf with
+  `role: provider` and the reply's URL as `source`.
+- **Reviewer:** they review knowledge pull requests for their products
+  on GitHub; their approval is a human review of any role under the
+  review rules.
+- **Steward:** they join the bundle's steward team in CODEOWNERS (a
+  membership change, no file edit) and sign with `tools/sign.py`;
+  review authority over the bundle's concepts and authorship credit on
+  its releases follow from membership.
+
+The knowledge digest (`tools/digest.py` in nasa-daac-knowledge renders
+`knowledge/<bundle>/DIGEST.md`: what the bundle claims about each
+product, with status, tier, evidence and a confirm link per claim) is
+what a person reads to decide what they could take on.
 
 ### Composite review rule
 
-A composite change that touches several spheres needs review
-representation from each sphere it touches, in addition to repository
-merge authority, knowledge steward review where knowledge changes and
-runtime review where packaging changes. During the interim solo period
-the exception below applies.
+A composite needs a maintainer plus a reviewer from each sphere it
+touches, not a steward of its own. A composite change that touches
+several spheres needs review representation from each sphere it
+touches, in addition to repository merge authority, knowledge steward
+review where knowledge changes and runtime review where packaging
+changes. While a repository has one active maintainer the solo period
+rules above apply.
 
-### Interim membership
+### Team membership
 
-One person occupies every team until a handoff, and that is recorded in
-each `governance.yaml` as `status: interim`. Review-enforcing rulesets
-stay off until a repository has two maintainers, as the interim solo
-period section says; the team structure exists now so that accepting a
-maintainer or a steward is a membership change, never a rearrangement.
+One person occupies every team today, and each `governance.yaml`
+records that as `status: interim` (the maintainer-count word build-kit
+validates; it says nothing about stewardship, and the person who holds
+a bundle is its steward). Review-enforcing rulesets stay off until a
+repository has two maintainers, as the solo period section says; the
+team structure exists now so that accepting a maintainer or a steward
+is a membership change, never a rearrangement.
 
 ### Planned repositories
 
@@ -112,7 +140,10 @@ Creating a planned repository (the honest placeholder for a capability
 the organization intends, holding nothing installable) is
 administrative. Promoting one out of planned is governed, cross-cutting
 work under its own dated entry in the pre-registration
-(docs/phase2-preregistration.md in the marketplace repository).
+(docs/phase2-preregistration.md in the marketplace repository). It
+needs a maintainer, sources on every claim, evals for high-severity
+gotchas and a named provider contact who has been invited; it does not
+need a signature from anyone at the provider.
 
 ## Contribution mechanics
 

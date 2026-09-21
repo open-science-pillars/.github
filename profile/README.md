@@ -22,7 +22,8 @@ the capability you want from it. It is the same plugin, and it brings
 its dependencies (the foundation and the provider knowledge) with it.
 
 Available: core, ocean-science, nasa-daac-knowledge. Developing:
-hydrology. Eleven sphere repositories are planned and not installable.
+hydrology, land-ice, atmospheric-physics, each with a release you can
+install. Nine sphere repositories are planned and not installable.
 
 ## By sphere
 
@@ -37,7 +38,7 @@ Rendered by build-kit's `osp.py sphere-view --into` from every repository's
 **Atmosphere**
 
 - [atmospheric-composition](https://github.com/open-science-pillars/atmospheric-composition) *(planned)*: Atmospheric Composition
-- [atmospheric-physics](https://github.com/open-science-pillars/atmospheric-physics) *(planned)*: Atmospheric Physics
+- [atmospheric-physics](https://github.com/open-science-pillars/atmospheric-physics) *(developing)*: Atmospheric Physics
 
 **Biosphere**
 
@@ -46,7 +47,7 @@ Rendered by build-kit's `osp.py sphere-view --into` from every repository's
 
 **Cryosphere**
 
-- [land-ice](https://github.com/open-science-pillars/land-ice) *(planned)*: Land Ice
+- [land-ice](https://github.com/open-science-pillars/land-ice) *(developing)*: Land Ice
 - [sea-ice](https://github.com/open-science-pillars/sea-ice) *(planned)*: Sea Ice
 
 **Geosphere**
@@ -62,7 +63,7 @@ Rendered by build-kit's `osp.py sphere-view --into` from every repository's
 
 **Provider knowledge** (signed by its stewards; cuts across spheres)
 
-- [nasa-daac-knowledge](https://github.com/open-science-pillars/nasa-daac-knowledge) *(available)*: Provider knowledge bundles (PO.DAAC, ESDIS), signed by their stewards; installed as a dependency of the domain capabilities
+- [nasa-daac-knowledge](https://github.com/open-science-pillars/nasa-daac-knowledge) *(available)*: Provider knowledge bundles (PO.DAAC, ESDIS, NSIDC, GES DISC, ASDC, OB.DAAC, LP DAAC, ORNL DAAC), signed by their stewards; installed as a dependency of the domain capabilities
 - [partner-knowledge](https://github.com/open-science-pillars/partner-knowledge) *(planned)*: Provider knowledge from non-NASA stewards, signed by them; none engaged yet
 
 **Composites** (cross-sphere)
